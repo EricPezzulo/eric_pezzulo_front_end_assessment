@@ -1,39 +1,23 @@
-import { useEffect, useState } from 'react';
 import styles from './App.module.css';
-import axios from 'axios';
+import Card from './Card';
+
+
+
 
 function App() {
   
-  const [info, setInfo]= useState([])
-
-  const url = 'https://api.hatchways.io/assessment/students'
-
-
-  useEffect(() => {
-    const fetchInfo = async () => {
-      const result = await axios(url)
-
-      console.log(result.data)
-      setInfo(result.data)
-    }
-    fetchInfo()
-  }, [])
-
-
   return (
     <div className={styles.app}>
-      
-      
-        {info.map(students => (
-          <p>{students.city}</p>
-          
-        ))} 
-  
+
+      <div className={styles.app__body}>
         
-    
+        <div className={styles.app__contents}>
+          <Card />
+        </div>
+      </div>
     </div>
   
   )
 }
 
-export default App;
+export default App

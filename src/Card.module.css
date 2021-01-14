@@ -1,0 +1,15 @@
+.card__Container {
+  display: flex;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.card__info {
+  display: grid;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
