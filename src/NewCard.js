@@ -39,7 +39,7 @@ function NewCard() {
                 <p >Company: </p>
               </div>
               <div className={styles.skill}>
-              <p >{info.}: </p>
+              <p >setInfo </p>
               </div>
               <div className={styles.average}>
                 <p >Average: </p>
