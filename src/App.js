@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import Card from './Card';
+import Results from './Results';
 
 
 
@@ -12,7 +12,7 @@ function App() {
       <div className={styles.app__body}>
         
         <div className={styles.app__contents}>
-          <Card />
+          <Results/>
         </div>
       </div>
     </div>
