@@ -24,28 +24,34 @@ function Card() {
 
 
     return (
-        <div className={styles.card__Contatiner}>
-            
+        
+      <div className={styles.cardContainer}>
+        <div className={styles.card}>
+          {info.map(info => (
+            <span className={styles.cards}>
 
-            <div className={styles.card__body}>
-                {info.map(info => (
-                    <span>
-                        <img  className={styles.picture} src={info.pic} alt=''></img>
-                        <p className={styles.name}>{info.firstName} {info.lastName}</p>
-                        <p className={styles.small__text}>Email: {info.email}</p>
-                        <p className={styles.small__text}>Company: {info.company}</p>
-                        <p className={styles.small__text}>Skill: {info.skill}</p>
-                        <p classname={styles.small__text}>Average: {info.grades}</p>
-                    </span>
-                ))}
-
-
-                <div className={styles.card__info}>
-                    
-                </div>
-
-            </div>
-            
+              <div className={styles.picture}>
+                <img src={info.pic} alt=''></img>
+              </div>
+              <div className={styles.name}>
+                <p>{info.firstName} {info.lastName}</p>
+              </div>
+              <div className={styles.email}>
+                <p >Email: {info.email}</p>
+              </div>
+              <div className={styles.company}>
+                <p >Company: {info.company}</p>
+              </div>
+              <div className={styles.skill}>
+              <p >Skill: {info.skill}</p>
+              </div>
+              <div className={styles.average}>
+                <p >Average: {info.grades}</p>
+              </div>
+              
+            </span>
+          ))} 
+        </div>    
         </div>
     )
 }
